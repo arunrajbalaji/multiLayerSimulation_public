@@ -27,9 +27,32 @@ Also be sure to check out *src/runParallelJob.m*, where you can see exactly how 
 
 The input for the simulation is provided in .JSON format. Here is a quick overview of the different sections of the input file. This will also help you get a quick sense of how flexible and adaptable the software is.
 
-### Directory, time step, and mesh parameters
+### Directory, time step, voltage, and structure
 
-![Input file sample image 1!](/inputFileImages/input_1.png "Sample input file, figure 1.") ![Input file sample image 2!](/inputFileImages/input_2.png "Sample input file, figure 2.")
+![Input file sample image 1!](/inputFileImages/input_1.png "Sample input file, figure 1.")
+
+- Here, you can select the directory where the input file is located and where ouput files will be generated. You can also specify whether the simulation will be restarted from previous output files.
+- It is possible to run using high-precision variables, if you anticipate large concentration spikes (i.e., with blocking electrode boundary conditions)
+- Select the target time step, in addition to the time-intervals for output generation and plotting (mostly useful for real-time debugging purposes when running on an interactive node).
+- You may choose to sweep the voltage to produce a voltammogram, but I usually run in potentiostatic mode.
+- Specify the interface locations (one more interface than the total number of layers)
+
+### Boundary conditions and physical constants
+
+![Input file sample image 2!](/inputFileImages/input_2.png "Sample input file, figure 2.")
+
+- Modify to implement reactive (or blocking) electrode boundary conditions for each of the species.
+- Otherwise, each boundary condition will be a Dirichlet condition, set to the initial value for each species in the layer adjacent to the boundary
+- Physical constants are set to standard values
+- Specify voltage drop across the entire multi-layered structure (potentiostatic operation mode)
+
+### Layer physical properties and aqueous chemistry
+
+![Input file sample image 3!](/inputFileImages/input_3.png "Sample input file, figure 3.")
+
+### Aqueous reaction mechanism
+
+![Input file sample image 4!](/inputFileImages/input_4.png "Sample input file, figure 4.")
 
 Here, you can select the directory where the input file is located and where ouput files will be generated. You can also specify whether the simulation will be restarted from previous output files.
 
