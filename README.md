@@ -70,14 +70,25 @@ Here is an example of a single layer. Remember, the code allows you to stitch to
 
 ## Mesh generation
 
+Users may use exponential mesh refinement near one or both boundaries of each layer. Specification of a mimimum and maximum mesh size is enough to analytically solve for the correct analytical stretching transformation that yields a cell distribution with smooth exponential transition from the smallest to largest cells.
+
 ## Boundary conditions
+
+Dirichlet conditions are used for electric potential at both ends of the domain, representing a potentiostatic operation mode. For aqueous species, the default behavior is Dirichlet conditions. The species concentrations at each boundary are set equal to their initial values in the adjacent layer. It is possible, however, to set the boundaries as reactive electrodes with Butler-Volmer kinetics for reactive species. This feature is only implemented in a limited capacity at this point, for experimental purposes.
 
 ## Numerical methods
 
+We offer a brief summary of the key numerical methods; an exhaustive description will appear in an upcoming publication. Second-order central differences are used for spatial discretization, and a third-order, implicit, multi-step method is used for temporal discretization. The start-up steps use lower-order implicit schemes in time, since the third-order method requires data from three previous points in time (which are not available for clean starts). 
+
 ## Output format and processing
 
-## Method of Manufactured Solutions
+Separate output files are created for each point in time and labelled accordingly.
 
-## Notes files
+## Room for improvement
 
-##
+Many of the files have elaborate headers that list the function name, arguments, outputs, and other helpful comments. This can be improved:
+
+- Some functions are missing the headers entirely
+- Some of the headers are not udpated to reflect the code below
+
+Some functions (particularly those at the core of the numerical methods) have large lists of arguments. This situation can be avoided by using an object-oriented approach instead, combining variables into logically-designed objects.
