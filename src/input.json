@@ -1,0 +1,558 @@
+{
+  "newStart": 0,
+  "restartFileName": "startFile.bin",
+  "highPrecision": 0,
+  "numberOfDigits": 34,
+  
+  "doOutput": 1,
+  "dtOut": 1E3,
+  
+  "doPlot": 1,
+  "dtPlot": 1E3,
+
+  "dt":1E2,
+  "tStart": 0.0,
+  "tEnd": 3.6E4,
+  
+  "voltageSweepOn": 0,
+  "voltageFileName": "voltageSweep.mat",
+  "voltageSweepRate": 2.0,
+
+  "interfaceLocs": [
+    0,
+    3E-3,
+    3.183E-3,
+    3.183002E-3,
+    3.238002E-3,
+    6.238002E-3
+  ],
+
+  "membraneLayers": [2,4],
+
+
+  "leftElectrodeBC": 0,
+  "rightElectrodeBC": 0,
+  "leftIonExchangeCurrent": [0, 0, 0, 0, 0, 0, 0, 0],
+  "rightIonExchangeCurrent": [0, 0, 0, 0, 0, 0, 0, 0],
+  
+  "T": 298,
+  "e": 1.602E-19,
+  "kb": 1.38E-23,
+  "stericA": 1.0E-10,
+  "waterPermittivity": 2.655e-10,
+  "litersPerCubicMeter": 1.0E3,
+  "nA": 6.022E23,
+  "squareCmPerSquareM": 1.0E4,
+  "deltaStern": 6.0E-11,
+  "deltaActivity": 5.0E-10,
+  
+  "appliedVoltage": 1.0,
+  
+  "layers": [
+    {
+      "layerID": 1,
+      "porosity": 1,
+      "tortuosity": 1,
+      "permittivity": 6.934E-10,
+      "backCharge": 0,
+      "coIonIndices": [],
+      "dxMax": 1e-4,
+      "dxMin": 2.5E-11,
+      "gridSymmetry": 2,
+      "doChemEq": 1,
+      "species": [
+        {
+          "name": "K+",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.957E-9,
+          "valence": 1,
+          "initVal": 0.0
+        },
+        {
+          "name": "HSO4-",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.385E-9,
+          "valence": -1,
+          "initVal": 1.0
+        },
+        {
+          "name": "H+",
+          "activityCoeff": 1,
+          "diffusionCoeff": 9.311E-9,
+          "valence": 1,
+          "initVal": 1.0
+        },
+        {
+          "name": "SO4-2",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.065E-9,
+          "valence": -2,
+          "initVal": 0.0
+        },
+        {
+          "name": "OH-",
+          "activityCoeff": 1,
+          "diffusionCoeff": 5.273E-9,
+          "valence": -1,
+          "initVal": 0.0
+        },
+        {
+          "name": "HOAc",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.089E-9,
+          "valence": 0,
+          "initVal": 0.0
+        },
+        {
+          "name": "OAc-",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.089E-9,
+          "valence": -1,
+          "initVal": 0.0
+        }
+      ],
+      "reactions": [
+        {
+          "reactants": ["HSO4-"],
+          "products": ["H+", "SO4-2"],
+          "forwardRateCoeff": 1.0E10,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H+", "SO4-2"],
+          "products": ["HSO4-"],
+          "forwardRateCoeff": 1.0E12,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["HOAc"],
+          "products": ["H+", "OAc-"],
+          "forwardRateCoeff": 1.7378E7,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H+", "OAc-"],
+          "products": ["HOAc"],
+          "forwardRateCoeff": 1.0E12,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H+", "OH-"],
+          "products": ["H2O"],
+          "forwardRateCoeff": 1.1E11,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H2O"],
+          "products": ["H+", "OH-"],
+          "forwardRateCoeff": 1.1E-3,
+          "wienCoeff": 0.5
+        }
+      ]
+    },
+    {
+      "layerID": 2,
+      "porosity": 0.15,
+      "tortuosity": 2.5820,
+      "permittivity": 2.655E-10,
+      "backCharge": -2.0,
+      "coIonIndices": [],
+      "dxMax": 1E-6,
+      "dxMin": 2.5E-11,
+      "gridSymmetry": 0,
+      "doChemEq": 0,
+      "species": [
+        {
+          "name": "K+",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.957E-9,
+          "valence": 1,
+          "initVal": 0.0
+        },
+        {
+          "name": "HSO4-",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.385E-9,
+          "valence": -1,
+          "initVal": 0.0
+        },
+        {
+          "name": "H+",
+          "activityCoeff": 1,
+          "diffusionCoeff": 9.311E-9,
+          "valence": 1,
+          "initVal": 13.3333333333333333
+        },
+        {
+          "name": "SO4-2",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.065E-9,
+          "valence": -2,
+          "initVal": 0.0
+        },
+        {
+          "name": "OH-",
+          "activityCoeff": 1,
+          "diffusionCoeff": 5.273E-9,
+          "valence": -1,
+          "initVal": 0.0
+        },
+        {
+          "name": "HOAc",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.089E-9,
+          "valence": 0,
+          "initVal": 0.0
+        },
+        {
+          "name": "OAc-",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.089E-9,
+          "valence": -1,
+          "initVal": 0.0
+        }
+      ],
+      "reactions": [
+        {
+          "reactants": ["HSO4-"],
+          "products": ["H+", "SO4-2"],
+          "forwardRateCoeff": 1.0E10,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H+", "SO4-2"],
+          "products": ["HSO4-"],
+          "forwardRateCoeff": 1.0E12,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["HOAc"],
+          "products": ["H+", "OAc-"],
+          "forwardRateCoeff": 1.7378E7,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H+", "OAc-"],
+          "products": ["HOAc"],
+          "forwardRateCoeff": 1.0E12,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H+", "OH-"],
+          "products": ["H2O"],
+          "forwardRateCoeff": 1.1E11,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H2O"],
+          "products": ["H+", "OH-"],
+          "forwardRateCoeff": 1.1E-3,
+          "wienCoeff": 0.5
+        }
+      ]
+    },
+    {
+      "layerID": 3,
+      "porosity": 0.15,
+      "tortuosity": 2.5820,
+      "permittivity": 2.655E-10,
+      "backCharge": 0,
+      "coIonIndices": [],
+      "dxMax": 5E-11,
+      "dxMin": 2.5E-11,
+      "gridSymmetry": 0,
+      "doChemEq": 0,
+      "species": [
+        {
+          "name": "K+",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.957E-9,
+          "valence": 1,
+          "initVal": 0.0
+        },
+        {
+          "name": "HSO4-",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.385E-9,
+          "valence": -1,
+          "initVal": 0.0
+        },
+        {
+          "name": "H+",
+          "activityCoeff": 1,
+          "diffusionCoeff": 9.311E-9,
+          "valence": 1,
+          "initVal": 13.3333333333333333
+        },
+        {
+          "name": "SO4-2",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.065E-9,
+          "valence": -2,
+          "initVal": 0.0
+        },
+        {
+          "name": "OH-",
+          "activityCoeff": 1,
+          "diffusionCoeff": 5.273E-9,
+          "valence": -1,
+          "initVal": 13.3333333333333333
+        },
+        {
+          "name": "HOAc",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.089E-9,
+          "valence": 0,
+          "initVal": 0.0
+        },
+        {
+          "name": "OAc-",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.089E-9,
+          "valence": -1,
+          "initVal": 0
+        }
+      ],
+      "reactions": [
+        {
+          "reactants": ["HSO4-"],
+          "products": ["H+", "SO4-2"],
+          "forwardRateCoeff": 1.0E10,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H+", "SO4-2"],
+          "products": ["HSO4-"],
+          "forwardRateCoeff": 1.0E12,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["HOAc"],
+          "products": ["H+", "OAc-"],
+          "forwardRateCoeff": 1.7378E7,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H+", "OAc-"],
+          "products": ["HOAc"],
+          "forwardRateCoeff": 1.0E12,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H+", "OH-"],
+          "products": ["H2O"],
+          "forwardRateCoeff": 1.1E11,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H2O"],
+          "products": ["H+", "OH-"],
+          "forwardRateCoeff": 1.1E-3,
+          "wienCoeff": 0.5
+        }
+      ]
+    },
+    {
+      "layerID": 4,
+      "porosity": 0.15,
+      "tortuosity": 2.5820,
+      "permittivity": 2.655E-10,
+      "backCharge": 2.0,
+      "coIonIndices": [],
+      "dxMax": 1E-6,
+      "dxMin": 2.5E-11,
+      "gridSymmetry": 0,
+      "doChemEq": 0,
+      "species": [
+        {
+          "name": "K+",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.957E-9,
+          "valence": 1,
+          "initVal": 0.0
+        },
+        {
+          "name": "HSO4-",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.385E-9,
+          "valence": -1,
+          "initVal": 0.0
+        },
+        {
+          "name": "H+",
+          "activityCoeff": 1,
+          "diffusionCoeff": 9.311E-9,
+          "valence": 1,
+          "initVal": 0.0
+        },
+        {
+          "name": "SO4-2",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.065E-9,
+          "valence": -2,
+          "initVal": 0.0
+        },
+        {
+          "name": "OH-",
+          "activityCoeff": 1,
+          "diffusionCoeff": 5.273E-9,
+          "valence": -1,
+          "initVal": 13.3333333333333333
+        },
+        {
+          "name": "HOAc",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.089E-9,
+          "valence": 0,
+          "initVal": 0.0
+        },
+        {
+          "name": "OAc-",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.089E-9,
+          "valence": -1,
+          "initVal": 0
+        }
+      ],
+      "reactions": [
+        {
+          "reactants": ["HSO4-"],
+          "products": ["H+", "SO4-2"],
+          "forwardRateCoeff": 1.0E10,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H+", "SO4-2"],
+          "products": ["HSO4-"],
+          "forwardRateCoeff": 1.0E12,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["HOAc"],
+          "products": ["H+", "OAc-"],
+          "forwardRateCoeff": 1.7378E7,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H+", "OAc-"],
+          "products": ["HOAc"],
+          "forwardRateCoeff": 1.0E12,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H+", "OH-"],
+          "products": ["H2O"],
+          "forwardRateCoeff": 1.1E11,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H2O"],
+          "products": ["H+", "OH-"],
+          "forwardRateCoeff": 1.1E-3,
+          "wienCoeff": 0.5
+        }
+      ]
+    },
+    {
+      "layerID": 5,
+      "porosity": 1,
+      "tortuosity": 1,
+      "permittivity": 6.934E-10,
+      "backCharge": 0.0,
+      "coIonIndices": [],
+      "dxMax": 1E-4,
+      "dxMin": 2.5E-11,
+      "gridSymmetry": 1,
+      "doChemEq": 1,
+      "species": [
+        {
+          "name": "K+",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.957E-9,
+          "valence": 1,
+          "initVal": 1.0
+        },
+        {
+          "name": "HSO4-",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.385E-9,
+          "valence": -1,
+          "initVal": 0.0
+        },
+        {
+          "name": "H+",
+          "activityCoeff": 1,
+          "diffusionCoeff": 9.311E-9,
+          "valence": 1,
+          "initVal": 0.0
+        },
+        {
+          "name": "SO4-2",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.065E-9,
+          "valence": -2,
+          "initVal": 0.0
+        },
+        {
+          "name": "OH-",
+          "activityCoeff": 1,
+          "diffusionCoeff": 5.273E-9,
+          "valence": -1,
+          "initVal": 0.0
+        },
+        {
+          "name": "HOAc",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.089E-9,
+          "valence": 0,
+          "initVal": 0.0
+        },
+        {
+          "name": "OAc-",
+          "activityCoeff": 1,
+          "diffusionCoeff": 1.089E-9,
+          "valence": -1,
+          "initVal": 1.0
+        }
+      ],
+      "reactions": [
+        {
+          "reactants": ["HSO4-"],
+          "products": ["H+", "SO4-2"],
+          "forwardRateCoeff": 1.0E10,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H+", "SO4-2"],
+          "products": ["HSO4-"],
+          "forwardRateCoeff": 1.0E12,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["HOAc"],
+          "products": ["H+", "OAc-"],
+          "forwardRateCoeff": 1.7378E7,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H+", "OAc-"],
+          "products": ["HOAc"],
+          "forwardRateCoeff": 1.0E12,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H+", "OH-"],
+          "products": ["H2O"],
+          "forwardRateCoeff": 1.1E11,
+          "wienCoeff": 0.0
+        },
+        {
+          "reactants": ["H2O"],
+          "products": ["H+", "OH-"],
+          "forwardRateCoeff": 1.1E-3,
+          "wienCoeff": 0.5
+        }
+      ]
+    }
+  ]
+}
